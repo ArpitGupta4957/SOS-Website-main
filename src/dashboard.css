@@ -1,0 +1,240 @@
+/* Dashboard Container */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto; /* Allow scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-container {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Navigation Bar */
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Ensures space between items */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #257CEB;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.navbar h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+
+/* SOS Button */
+.sos-button {
+  background: #DC2626;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.username {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.sender-info {
+  background-color: #f9f9f9;
+  padding: 6px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+
+/* Logout Button Container */
+.logout-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px; /* Adds spacing from the right edge */
+}
+
+/* Circular Logout Button */
+.logout-btn {
+  background: #DC2626;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 12px; /* Adjusted to fit inside the circle */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+/* Ensure text inside fits properly */
+.logout-btn span {
+  font-size: 10px;
+}
+
+/* Hover effect */
+.logout-btn:hover {
+  background: #2436fec7;
+}
+
+.sender-info, .sender-details {
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #000000;
+  text-align: left;
+  font-weight: 500;
+}
+
+
+
+/* User Container */
+.user-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+/* Username */
+.username {
+  font-weight: bold;
+}
+
+.scrollable-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
+  gap: 80px;
+  padding: 20px;
+  max-height: 80vh;
+
+}
+
+/* Image Container */
+.image-container {
+  margin-top: 200px; /* Height of navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 60px); /* Adjusts height dynamically */
+}
+
+
+/* Image Box */
+.image-box {
+  background: #8cbbf7;
+  color: black;
+  width: 500px; /* Compact like an Instagram post */
+  max-width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 12px;
+}
+
+
+/* Image Styling */
+.alert-image {
+  width: 100%;
+  max-height: 250px;       /* Keeps image height compact */
+  height: auto;
+  object-fit: contain;     /* Shows full image without cropping */
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+/* No Images Available Box */
+.no-image-box {
+  background: #8cbbf7; /* Light faded blue */
+  color: black;
+  width: 1200px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 14px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Accept & Reject Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.accept, .reject {
+  font-size: 20px;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 8px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.accept {
+  background: #50D147;
+  color: white;
+}
+
+.reject {
+  background: #EF5656;
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .image-box {
+    width: 95%;
+    height: 40vh; /* Adjust height for smaller screens */
+  }
+}

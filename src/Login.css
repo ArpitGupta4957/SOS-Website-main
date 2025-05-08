@@ -1,0 +1,153 @@
+/* Ensure Full Page Coverage */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("./background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Frosted Glass Container */
+.container-1 {
+  background: rgba(16, 15, 15, 0.3);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 320px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.container-1:hover {
+  transform: scale(1.05);
+}
+
+/* Headings */
+h2 {
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 22px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input Fields */
+input {
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+input:focus {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background: linear-gradient(135deg, #0056b3, #003d80);
+  transform: scale(1.05);
+}
+
+/* Google Sign-In Button */
+.google-signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: #444;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+.google-signin img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.google-signin:hover {
+  background: #f1f1f1;
+  transform: scale(1.05);
+}
+
+/* Google Sign-In Hover */
+#googleSignIn > div {
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#googleSignIn > div:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Apple Sign-In */
+.apple-signin {
+  background: black;
+  color: white;
+  font-weight: bold;
+}
+
+.apple-signin:hover {
+  background: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .background {
+    height: auto;
+    padding: 20px;
+  }
+
+  .container-1 {
+    width: 90%;
+    padding: 20px;
+  }
+}
